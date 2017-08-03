@@ -1,6 +1,6 @@
 package _2;
 
-public class DVD extends Loja {
+public class DVD extends Fornecedor {
 
 	private String duracao;
 
@@ -8,5 +8,14 @@ public class DVD extends Loja {
 		super(nome, preco);
 		this.duracao = duracao;
 	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString() + 
+				"\n" + 
+		"Duracação do DVD: " + DVD.this.duracao;
+	}
+	
+	}
 
-}
