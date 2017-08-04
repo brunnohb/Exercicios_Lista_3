@@ -1,11 +1,11 @@
 package _2;
 
-public class Livros extends Fornecedor {
+public class Livros extends Produto {
 
 	private String autor;
 
-	public Livros(String nome, double preco, String autor) {
-		super(nome, preco);
+	public Livros(String nome, double preco, String codBarras, String autor) {
+		super(nome, preco, codBarras);
 		this.autor = autor;
 	}
 

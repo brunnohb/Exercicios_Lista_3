@@ -31,7 +31,7 @@ public class ContaCorrente {
 	}
 
 	public void saque(double valor) {
-		taxa = valor * 0.005;
+		taxa = valor * 0.05;
 		this.saldo -= (valor + taxa);
 
 	}
