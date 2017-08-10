@@ -4,7 +4,7 @@ public class CDs extends Produto {
 
 	private String numeroFaixas;
 
-	public CDs(String nome, double preco, String codBarras, String numeroFaixas) {
+	public CDs(String nome, String preco, String codBarras, String numeroFaixas) {
 		super(nome, preco, codBarras);
 		this.numeroFaixas = numeroFaixas;
 	}

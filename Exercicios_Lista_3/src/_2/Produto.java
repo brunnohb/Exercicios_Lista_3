@@ -6,15 +6,15 @@ package _2;
  * @author Bruno Henrique Boni.
  *
  */
-public abstract class Produto {
+public abstract class Produto implements Comparable<Produto>{
 	/**
 	 * Esta classe é abstrata para retratar os atributo obrigatório à todas as classes.
 	 */
 	private String nome;
-	private double preco;
+	private String preco;
 	private String codBarras;
 	
-	public Produto(String nome, double preco, String codBarras){
+	public Produto(String nome, String preco, String codBarras){
 		super();
 		this.nome = nome;
 		this.preco = preco;
@@ -22,11 +22,11 @@ public abstract class Produto {
 	}
 	
 	public String toString() {
-		return "Nome do Produto: " + this.nome + 
+		return  this.nome + 
 				"\n" + 
-				"Preco do Produto: " + this.preco +
+				"PREÇO DO PRODUTO: " + this.preco +
 				"\n" +
-				"Código de Barras do Produto: " + this.codBarras;
+				"CÓDIGO DE BARRAS DO PRODUTO: " + this.codBarras;
 	}
 	
 	@Override
@@ -44,11 +44,11 @@ public abstract class Produto {
 		this.nome = nome;
 	}
 
-	public double getPreco() {
+	public String getPreco() {
 		return preco;
 	}
 
-	public void setPreco(double preco) {
+	public void setPreco(String preco) {
 		this.preco = preco;
 	}
 
@@ -59,6 +59,10 @@ public abstract class Produto {
 	public void setCodBarras(String codBarras) {
 		this.codBarras = codBarras;
 	}
-
+	
+	@Override
+	public int compareTo(Produto o) {
+		return this.nome.compareTo(o.getPreco());
+	}
 	
 }
